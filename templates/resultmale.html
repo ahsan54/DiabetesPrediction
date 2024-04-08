@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .result-container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+        }
+
+        @media only screen and (max-width: 768px) {
+            h1 {
+                font-size: 40px; 
+            }
+
+            p {
+                font-size: 20px; 
+                font-weight: normal; 
+            }
+        }
+
+        .image-section-2 {
+            background-image: url('/static/DpsAusImg2.jpeg'); 
+            width: 100vw;
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            padding: 30px; 
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-section-2">
+
+
+        
+        <div class="result-container">
+            <h1>Diabetes Prediction Result</h1>
+            <p>{{ result_message }}</p>
+            
+            {% if result_message == "You Will Get Diabetes In Future" or result_message =="You Will Get Pre-Diabetes In Future" %}
+                <p>For personalized advice, visit <a href="{{ url_for('nutri') }}" target="_blank">NutriFitJourney</a>.</p>
+            {% else %}
+                <p>For risk calculation, visit <a href="{{ url_for('Risk') }}" target="_blank">RiskCalculator</a>.</p>
+            {% endif %}
+        </div>
+
+
+
+    </div>
+</body>
+</html>

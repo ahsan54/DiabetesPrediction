@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+
+
+* {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+
+.navbar {
+  padding: 10px;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  background-color: rgb(59, 127, 190);
+  top: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 0px 0px; 
+  }
+
+  .navbar ul li {
+    display: inline-block; 
+    margin: 0px 0px; 
+    padding: 0px 5px; 
+  }
+}
+
+
+
+
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1vw;
+}
+
+
+@media (max-width: 768px) {
+  .navbar ul li a {
+    font-size:0.8vb;
+ 
+  }
+}
+
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
+h1:hover {
+    color: rgb(66, 198, 250);
+}
+
+.Calculator {
+    color: rgb(255, 255, 255);
+    margin-top: 3%;
+    text-align: center;
+    background-image: url('/static/RiskBack.jpg');
+    background-size: cover;
+    font-size: 22px;
+}
+
+.Calculator:hover {
+    box-shadow: 0 0 50px skyblue;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .Calculator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Calculator input {
+        margin-top: 10px; 
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar" >  
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/signup">SignUp</a></li>
+            <li><a href="/login">Log-In</a></li>
+            <li><a href="/RiskCal">Risk Calculator</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+
+
+
+
+
+
+
+    <h1> Welcome To Risk Calculator</h1>
+
+    <form id="diabetesForm" onsubmit="calculateRisk(event);">
+        <div class="Calculator">
+            Enter Your BMI Here:
+            <input type="number" name="bmi" id="bmi" required> <br><br><br>
+
+            <label for="familyHistory">Is Diabetes in Your Family History?</label>
+            <select name="familyHistory" id="familyHistory" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br><br>
+
+            <label for="Obesity">Are You Currently Dealing With Obesity?</label>
+            <select name="Obesity" id="Obesity" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br><br>
+
+            <label for="SlowHealing">Have You Experienced Slow Healing?</label>
+            <select name="SlowHealing" id="SlowHealing" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br><br>
+
+            <label for="smoking">Are You a Smoker? </label>
+            <select name="smoking" id="smoking" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br><br>
+
+            <label for="diet">Is Your Diet Healthy? </label>
+            <select name="diet" id="diet" required>
+                <option value="Healthy">Healthy</option>
+                <option value="Poor">Poor</option>
+            </select><br><br><br>
+
+            <label for="exercise">Do You Exercise Daily? </label>
+            <select name="exercise" id="exercise" required>
+                <option value="Regular">Regular</option>
+                <option value="No">No</option>
+            </select><br><br><br>
+
+            <label for="exercise">How would you rate your Stress levels on a daily basis?</label>
+            <select name="stress" id="stress" required>
+                <option value="No Stress">No Stress</option>
+                <option value="Normal Stress">Normal Stress</option>
+                <option value="High Stress">High Stress</option>
+            </select><br><br><br>
+
+            <label for="exercise">Your daily current Blood Pressure levels?</label>
+            <select name="BloodPressure" id="BloodPressure" required>
+                <option value="Normal">Normal</option>
+                <option value="High">High</option>
+            </select><br><br><br>
+
+            <label for="exercise">Have you ever been diagnosed with Gestational Diabetes?</label>
+            <select name="GestationalDiabetes" id="GestationalDiabetes" required>
+                <option value="Yes">Yes</option>
+                <option value="No ">No</option>
+            </select><br><br><br>
+            
+            <label for="exercise">Consuming Alcohol?</label>
+            <select name="Alcohol" id="Alcohol" required>
+                <option value="Yes">Yes</option>
+                <option value="No ">No </option>
+            </select><br><br><br>
+
+
+
+
+            <input type="submit" value="Calculate" style="color: black; font-weight: bold;">
+            <p id="result" style="font-weight: bold;">Risk: </p>
+        </div>
+    </form>
+
+  
+
+    <script>
+        function calculateRisk(event) {
+            event.preventDefault();
+
+            var bmi = parseFloat(document.getElementById('bmi').value);
+            var familyHistory = document.getElementById('familyHistory').value === "Yes" ? 1 : 0;
+            var Obesity = document.getElementById('Obesity').value === "Yes" ? 1 : 0;
+            var SlowHealing = document.getElementById('SlowHealing').value === "Yes" ? 1 : 0;
+            var diet = document.getElementById('diet').value === "Healthy" ? 0 : 1;
+            var exercise = document.getElementById('exercise').value === "Regular" ? 0 : 1;
+            var smoking = document.getElementById('smoking').value === "Yes" ? 1 : 0;
+            var stress = document.getElementById('stress').value === "No Stress" ? 0 : (document.getElementById('stress').value === "Moderate Stress" ? 1 : 2);
+            var BloodPressure = document.getElementById('BloodPressure').value === "Normal" ? 0 : 1;
+            var GestationalDiabetes = document.getElementById('GestationalDiabetes').value === "Yes" ? 1 : 0;
+            var Alcohol = document.getElementById('Alcohol').value === "Yes" ? 1 : 0;
+
+
+            var sum = familyHistory + diet + exercise + smoking + Obesity + SlowHealing + stress  + BloodPressure +  GestationalDiabetes  +   Alcohol;
+
+            var bmiCategory;
+
+            if (bmi <= 18.5) {
+                bmiCategory = "Underweight";
+            } else if (bmi > 18.5 && bmi < 25) {
+                bmiCategory = "Normal Weight";
+            } else if (bmi >= 25) {
+                bmiCategory = "Overweight";
+            }
+
+            console.log("BMI Category: " + bmiCategory);
+            console.log("Sum: " + sum);
+
+
+
+
+            if (bmiCategory === "Overweight" && sum ==11) {
+                risk = "Extreme";
+            }
+
+            if (bmiCategory === "Overweight" && sum == 10) {
+                risk = "Extreme";
+            }
+            if (bmiCategory === "Overweight" && sum == 9) {
+                risk = "Extreme";
+            }
+            if (bmiCategory === "Overweight" && sum == 8) {
+                risk = "Very High";
+            }
+            if (bmiCategory === "Overweight" && sum == 7) {
+                risk = "Very High";
+            }
+            if (bmiCategory === "Overweight" && sum == 6) {
+                risk = "High";
+            }
+            if (bmiCategory === "Overweight" && sum == 5) {
+                risk = "High";
+            }
+
+            if (bmiCategory === "Overweight" && sum == 4) {
+                risk = "High";
+            }
+            if (bmiCategory === "Overweight" && sum == 3) {
+                risk = "Medium";
+            }
+            if (bmiCategory === "Overweight" && sum == 2) {
+                risk = "Medium";
+            }
+            if (bmiCategory === "Overweight" && sum == 1) {
+                risk = "Low";
+            }
+            if (bmiCategory === "Overweight" && sum == 0) {
+                risk = "Low";
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            if (bmiCategory === "Normal Weight" && sum == 11) {
+                risk = "Extreme";
+            }
+            if (bmiCategory === "Normal Weight" && sum == 10) {
+                risk = "Extreme";
+            }
+            if (bmiCategory === "Normal Weight" && sum == 9) {
+                risk = "Very High";
+            }
+            if (bmiCategory === "Normal Weight" && sum == 8) {
+                risk = "Very High";
+            }
+            if (bmiCategory === "Normal Weight" && sum == 7) {
+                risk = "High";
+            }
+
+            if (bmiCategory === "Normal Weight" && sum == 6) {
+                risk = "High";
+            }
+
+            if (bmiCategory === "Normal Weight" && sum == 5) {
+                risk = "Medium";
+            }
+
+            if (bmiCategory === "Normal Weight" && sum == 4) {
+                risk = "Medium";
+            }
+            if (bmiCategory === "Normal Weight" && sum == 3) {
+                risk = "Low";
+            }
+
+            if (bmiCategory === "Normal Weight" && sum == 2) {
+                risk = "Low";
+            }
+
+            if (bmiCategory === "Normal Weight" && sum == 1) {
+                risk = "Very Low";
+            }
+            if (bmiCategory === "Normal Weight" && sum == 0) {
+                risk = "Very Low";
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            if (bmiCategory === "Underweight" && sum ==11) {
+                risk = "Very High";
+            }
+
+            if (bmiCategory === "Underweight" && sum == 10) {
+                risk = "Very High";
+            }
+            if (bmiCategory === "Underweight" && sum == 9) {
+                risk = "High";
+            }
+
+            if (bmiCategory === "Underweight" && sum == 8) {
+                risk = "High";
+            }
+            if (bmiCategory === "Underweight" && sum == 7) {
+                risk = "Medium";
+            }
+            if (bmiCategory === "Underweight" && sum == 6) {
+                risk = "Medium";
+            }
+
+            if (bmiCategory === "Underweight" && sum == 5) {
+                risk = "Low";
+            }
+
+            if (bmiCategory === "Underweight" && sum == 4) {
+                risk = "Low";
+            }
+            if (bmiCategory === "Underweight" && sum == 3) {
+                risk = "Very Low";
+            }
+            if (bmiCategory === "Underweight" && sum == 2) {
+                risk = "Very Low";
+            }
+
+            if (bmiCategory === "Underweight" && sum == 1) {
+                risk = "Very Low";
+            }
+
+
+            if (bmiCategory === "Underweight" && sum == 0) {
+                risk = "Very Low";
+            }
+
+
+
+
+
+
+
+
+
+
+
+            document.getElementById('result').innerText = "Risk: " + risk  ;
+        }
+    </script>
+
+</body>
+
+</html>

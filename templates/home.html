@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Diabetes Prediction System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+* {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+.navbar {
+  padding: 10px;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  background-color: rgb(59, 127, 190);
+  top: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 0px 0px; 
+  }
+
+  .navbar ul li {
+    display: inline-block; 
+    margin: 0px 0px; 
+    padding: 0px 5px; 
+  }
+}
+
+
+
+
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1vw;
+}
+
+
+@media (max-width: 768px) {
+  .navbar ul li a {
+    font-size:0.8vb;
+ 
+  }
+}
+
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+
+}
+
+
+
+
+
+
+.image-section-1 {
+  background-image: url('/static/FrontPic.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+min-height: 525px;
+}
+
+@media only screen and (max-width: 768px) {
+  .image-section-1 {
+    min-height: 250px;
+  }
+}
+
+
+
+
+.content {
+    position: absolute;
+    top: 8%;
+    left: 1%;
+    color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {  
+    top: 5%;
+    left: 1%;
+    }
+
+    .content h1 {
+        font-size: 1.2em; 
+    }
+
+
+    .content p {
+        font-size: 0.7em; 
+        width: 55%;
+   
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .content {  
+        top: 6%;
+        left: 3%; 
+    }
+
+    .content h1 {
+        font-size: 2.5em; 
+    }
+
+    .content p {
+        font-size: 1em;
+        width: 60%;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .DPS-P p {
+        text-align: center;
+        font-size: 10px; 
+    }
+}
+
+
+
+
+
+
+
+.Section1 {
+  background-image: url('/static/TextHomePage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Section1 {
+    height: 50px;
+   
+  }
+}
+
+
+
+
+
+
+.image-section-3 {
+    background-image: url('/static/MealDiabetesImg.jpg'); 
+    background-size:100%; 
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+      @media (max-width: 768px) {
+        .image-section-3 {
+    background-size: contain;
+  }
+
+      
+}
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 50px; 
+    gap: 20px;
+   
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .container h2 {
+        font-size: 1em;
+    }
+
+    .container p {
+        font-size: 0.7em;
+    }
+
+    .box {
+        margin-bottom: 50px; 
+    }
+}
+
+
+
+
+
+
+
+
+.box {
+        background-color: rgb(128, 118, 118);
+        background-size: cover;
+          background-position: center; 
+          width: 350px;
+          transition: background-color 0.5s ease, transform 0.5s ease;
+          margin-bottom: 10px;
+      }
+      @media (max-width: 600px) {
+    .box {
+        min-width: auto;
+        width: 100%;
+    }
+}
+  
+      .box:hover {
+    background-color:rgb(69, 65, 63); 
+    transform: translateY(-5px);
+    box-shadow: 0 5px 50px skyblue;
+    color:cornflowerblue; 
+  }
+
+
+
+
+
+
+
+
+  h1 {
+        font-size: 7vh;
+        color:rgb(0, 149, 255);              
+    }
+
+    @media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 4vh; 
+        color:rgb(0, 191, 255);    
+    }
+}
+
+
+
+    p {
+        font-size:18px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+
+
+
+
+
+
+
+
+
+.login-button {
+    min-width: 20%;
+
+    background-color: #3385ff; 
+    font-size: 20px;
+    font-weight: bold;
+    border: none; 
+    border-radius: 20px; 
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 35px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+
+        }
+
+        @media (max-width: 768px) {
+    .login-button {
+        min-width: 10%;
+        font-size: 5px; 
+        padding: 5px 10px;
+        margin-top: 0%;
+    }
+}
+
+
+
+        .login-button:hover {
+            background-color: #000000;
+        }
+    </style>
+
+
+    
+ 
+
+
+    
+
+
+
+     <link rel="icon" type="image/x-icon" href="/static/logo1.png">
+</head>
+<body>
+    
+<div class="navbar" >  
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/signup">SignUp</a></li>
+        <li><a href="/login">Log-In</a></li>
+        <li><a href="/RiskCal">Risk Calculator</a></li>
+        <li><a href="/aboutus">About Us</a></li>
+    </ul>
+</div>
+
+   
+
+    <div class="image-section-1">
+
+</div>
+
+
+
+
+
+<div class="content">
+<h1>Diabetes Prediction System</h1>
+<br>
+<div class="DPS-P">
+<p style="color: #000000;">Get ahead of health risks with our cutting-edge prediction system. 
+    Explore your <br> diabetes risk instantly on our user-friendly web platform</p>
+</div>
+    <br> <br> 
+    <a href="{{ url_for('signup') }}"><button class="login-button">Get Started</button></a>
+
+</div>
+
+<br>
+
+
+<div class="Section1">
+ 
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<h1 style="text-align: center;">What is Diabetes?</h1>
+
+<div class="image-section-3">
+<div class="container">
+
+    
+
+    <div class="box">
+     
+        <h2 style="text-align: center;"> Type 1 </h2>
+        <p>Type 1  is an autoimmune condition where the body’s own immune system is 
+            activated to destroy the beta cells in the pancreas which produce insulini. 
+            We do not know what causes this autoimmune reaction however environmental factors 
+            are thought to set off the process. Type 1 diabetes is not linked to modifiable lifestyle 
+            factors. Currently there is no cure and it is lifelong.</p>
+        
+    </div>
+
+
+
+    <div class="box">
+      
+        <h2 style="text-align: center;"> Type 2</h2>
+        <p>Type 2 diabetes is a condition in which the body becomes resistant to the normal effects of 
+            insulin and gradually loses the capacity to produce enough insulin in the pancreas. 
+            The condition has strong genetic and family-related (non-modifiable) risk factors and is also 
+            often associated with modifiable lifestyle risk factors. We do not know the exact genetic causes 
+            of type 2 diabetes.</p>
+        
+    </div>
+
+
+    <div class="box">
+     
+        <h2 style="text-align: center;">Gestational Diabetes</h2>
+        <p>Gestational diabetes mellitus (sometimes referred to as GDM) is a type of diabetes that occurs during pregnancy.
+            Gestational diabetes is diagnosed when higher than normal blood glucose levels first appear during pregnancy. Most women with gestational diabetes will no longer have 
+            diabetes after the baby is born, but some women will continue to have high BG levels after delivery.
+              </p>
+  
+    </div>
+
+
+
+    <div class="box">
+     
+        <h2 style="text-align: center;">What is Diabetes</h2>
+        <p>Diabetes is a condition where there is too much glucose in the blood. 
+            The body can not make insulin, enough insulin or is not effectively using the insulin it does make. 
+            Over time high glucose levels can damage blood vessels and nerves, resulting in long term health complications including heart, kidney and eye damage.
+           Its management requires close collaboration with healthcare.</p>
+    </div>
+
+
+
+</div>
+</div>
+
+
+
+
+</body>
+</html>

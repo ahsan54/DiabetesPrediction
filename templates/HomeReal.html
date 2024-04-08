@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Diabetes Prediction System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <style>
+* {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+        .navbar {
+  padding: 10px;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  background-color: rgb(59, 127, 190);
+  top: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 0px 0px; 
+  }
+
+  .navbar ul li {
+    display: inline-block; 
+    margin: 0px 0px; 
+    padding: 0px 5px; 
+  }
+}
+
+
+
+
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1vw;
+}
+
+
+@media (max-width: 768px) {
+  .navbar ul li a {
+    font-size:0.8vb;
+ 
+  }
+}
+
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+
+}
+
+
+
+
+
+
+.image-section-1 {
+  background-image: url('/static/FrontPic.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+min-height: 525px;
+}
+
+@media only screen and (max-width: 768px) {
+  .image-section-1 {
+    min-height: 250px;
+  }
+}
+
+
+.content {
+    position: absolute;
+    top: 8%;
+    left: 1%;
+    color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {  
+    top: 5%;
+    left: 1%;
+    }
+
+    .content h1 {
+        font-size: 1.2em; 
+    }
+
+    .content h2 {
+        font-size: 0.9em; 
+    }
+
+    .content p {
+        font-size: 0.7em; 
+        width: 55%;
+   
+    }
+}
+
+
+.content:hover{
+    color:rgb(0, 174, 255); 
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .content {  
+        top: 6%;
+        left: 3%; 
+    }
+
+    .content h1 {
+        font-size: 2.5em; 
+    }
+
+    .content p {
+        font-size: 1em;
+        width: 60%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.Section1 {
+  background-image: url('/static/TextHomePage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Section1 {
+    height: 50px;
+   
+  }
+}
+
+
+
+
+
+
+
+
+.image-section-3 {
+    background-image: url('/static/MealDiabetesImg.jpg'); 
+    background-size:100%; 
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+      @media (max-width: 768px) {
+        .image-section-3 {
+    background-size: contain;
+  }
+
+      
+}
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px; 
+    gap: 20px;
+   
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .container h2 {
+        font-size: 1em;
+    }
+
+    .container p {
+        font-size: 0.7em;
+    }
+
+    .box {
+        margin-bottom: 50px; 
+    }
+}
+
+
+
+
+
+
+
+
+
+.box {
+    background-color: rgb(128, 118, 118);
+    background-size: cover;
+    background-position: center; 
+    min-width: 400px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .box {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+  
+      .box:hover {
+    background-color:rgb(69, 65, 63); 
+    transform: translateY(-5px);
+    box-shadow: 0 5px 50px skyblue;
+    color:cornflowerblue; 
+  }
+
+
+
+
+
+
+
+
+  h1 {
+        font-size: 7vh;
+        color:rgb(0, 149, 255);              
+    }
+
+    @media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 4vh; 
+        color:rgb(0, 191, 255);    
+    }
+}
+
+
+
+h2 {
+        font-size: 22px;
+                    
+    }
+
+    p {
+        font-size:18px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+
+
+
+.p{
+  font-size:15px;
+        text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+     <link rel="icon" type="image/x-icon" href="/static/logo1.png">
+</head>
+<body>
+    
+<div class="navbar" >  
+    <ul>
+        <li><a href="/HomeReal">Home</a></li>
+        <li><a href="/predict">Predict Female</a></li>
+        <li><a href="/predictmale">Predict Male</a></li>
+        <li><a href="/contact">Feedback</a></li>
+        <li><a href="/">Log Out</a></li>
+    </ul>
+</div>
+
+
+
+    <div class="image-section-1">
+
+</div>
+
+
+
+
+
+<div class="content">
+<h1>Diabetes Prediction System</h1>
+<h2>Welcome {{name}}</h2>
+<br>
+<p style="color: #000000;">Scroll down to get information about diabetic medical terms.</p>
+</div>
+
+
+<br>
+
+
+<div class="Section1">
+ 
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<h1 style="text-align: center;">Medical Terms?</h1>
+
+<div class="image-section-3">
+
+
+<div class="container">  
+
+    <div class="box">
+     
+        <h2 style="text-align: center;"> FBS </h2>
+        <p>Fasting blood sugar is a blood test that measures the amount of glucose (sugar) in
+             your bloodstream after a period of fasting.
+             It is commonly used to diagnose and monitor diabetes. FBS levels are typically 
+             taken after an overnight fast of at least 8 hours.
+             Normal fasting blood sugar levels are generally between  70--99(mg/dL).</p>
+        
+    </div>
+
+
+
+    <div class="box">
+      
+        <h2 style="text-align: center;"> HbA1c </h2>
+        <p>HbA1c is a blood test that reflects the average blood sugar level over the past 2-3 months. 
+            It measures the percentage of hemoglobin that is coated with sugar.
+            HbA1c is used to assess long-term blood sugar control in individuals with diabetes. It 
+            provides a more stable picture of blood sugar levels.
+            Normal HbA1c levels are from 4.2% to 5.7%</p>
+    </div>
+
+</div>
+</div>
+
+
+
+
+</body>
+</html>

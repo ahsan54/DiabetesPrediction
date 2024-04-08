@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/static/logo1.png">
+<style>
+
+
+* {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+.navbar {
+  padding: 10px;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  background-color: rgb(59, 127, 190);
+  top: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 0px 0px; 
+  }
+
+  .navbar ul li {
+    display: inline-block; 
+    margin: 0px 0px; 
+    padding: 0px 5px; 
+  }
+}
+
+
+
+
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1vw;
+}
+
+
+@media (max-width: 768px) {
+  .navbar ul li a {
+    font-size:0.8vb;
+ 
+  }
+}
+
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("{{ url_for('static', filename='PredictFe.jpg') }}");
+    background-size: cover;
+    max-width:100%;
+    height: auto;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+   body {
+      background-position: center center;
+      height: 900px;
+      background-size:100%; 
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   }
+}
+
+
+
+
+
+h1 {
+    
+    color: white;
+    font-family: arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #4dc3ff;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 28px; 
+        margin-top: 30px; 
+    }
+
+    h2 {
+       font-size: 20px; 
+        margin-top: 10%;
+    }
+}
+
+
+
+
+
+      
+ 
+        .main input[type="text"] {
+            padding: 1px;
+            margin-bottom: 10px;
+        }
+        @media only screen and (max-width: 768px) {
+    .main input[type="text"] {
+      width: 80%;
+        box-sizing: border-box; 
+        margin: 20px;
+        padding: 1px;
+    }
+}
+
+
+
+
+
+        input[type=submit] {
+            width: 10%;
+    background-color: #4dc3ff;
+    font-size: 15px;
+    font-weight: bold;
+    border: none; 
+    border-radius: 20px; 
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 35px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+@media only screen and (max-width: 768px) {
+    input[type=submit] {
+        width: 30%; 
+        box-sizing: border-box; 
+    }
+}
+
+input[type=submit]:hover {
+    background-color: #3385ff; 
+}
+
+
+@media only screen and (max-width: 768px) {
+  .MainArea {
+    margin-top: 15%; 
+  }
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+    <div class="navbar" >  
+        <ul>
+            <li><a href="/HomeReal">Home</a></li>
+            <li><a href="/predict">Predict Female</a></li>
+            <li><a href="/predictmale">Predict Male</a></li>
+            <li><a href="/contact">Feedback</a></li>
+            <li><a href="/">Log Out</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+<h1>Diabetese Prediction Female </h1> 
+
+<div align='center' class ="main">
+<h2>Please Enter Following Details:</h2>
+<form action="/result" method="post">
+
+
+<div class="MainArea">
+
+<table>
+   
+
+    <tr>
+        <td align="center"><b><font color="white">Pragnancy:</font></b></td>
+        <td align="left"> <input type="text" name="n2" required> </td>
+    </tr>
+    <tr>
+        <td align="center"><b><font color="white">GestationalDiabetes:</font></b></td>
+        <td align="left"> <input type="text" name="n3" required> </td>
+    </tr>
+    
+    <tr>
+        <td align="center"><b><font color="white">BMI:</font></b></td>
+        <td align="left"> <input type="text" name="n4" required> </td>
+    </tr>
+    <tr>
+        <td align="center"><b><font color="white">FBS:</font></b></td>
+        <td align="left"> <input type="text" name="n5" required> </td>
+    </tr>
+  
+    
+    <tr>
+        <td align="center"><b><font color="white">FamilyHistory:</font></b></td>
+        <td align="left"> <input type="text" name="n7" required> </td>
+    </tr>
+    
+    <tr>
+        <td align="center"><b><font color="white">Exercise:</font></b></td>
+        <td align="left"> <input type="text" name="n8" required> </td>
+    </tr>
+    
+    <tr>
+        <td align="center"><b><font color="white">IsDietHealthy:</font></b></td>
+        <td align="left"> <input type="text" name="n9" required> </td>
+    </tr>
+
+</table>
+</div>
+<input type="submit" value="Predict">
+</form>
+
+
+</div>
+
+ 
+       
+ 
+
+
+</body>
+</html>

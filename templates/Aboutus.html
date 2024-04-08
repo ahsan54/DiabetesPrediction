@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction System</title>
+    <style>
+
+
+*{
+    padding: 0%;
+    margin: 0;
+        font-family: 'Times New Roman', serif;
+}
+
+
+
+.navbar {
+  padding: 10px;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  background-color: rgb(59, 127, 190);
+  top: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 0px 0px; 
+  }
+
+  .navbar ul li {
+    display: inline-block; 
+    margin: 0px 0px; 
+    padding: 0px 5px; 
+  }
+}
+
+
+
+
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1vw;
+}
+
+
+@media (max-width: 768px) {
+  .navbar ul li a {
+    font-size:0.8vb;
+ 
+  }
+}
+
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+      h1 {
+          font-size: 55px;
+          color: rgb(0, 0, 0);
+      }
+  
+      p {
+          font-size:15px;
+          text-align: center;
+          color: rgb(255, 255, 255);
+      }
+
+
+    
+  h2{
+    font-size: 40px;
+          color: rgb(0, 183, 255);
+  }
+
+
+h3{
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+
+}
+
+.box:hover h3 {
+  font-size: 25px;
+  color: skyblue;
+}
+
+  
+
+
+
+
+.AboutImage {
+    background-image: url('/static/about-us-banner.jpg');
+    background-size: cover;
+    padding: 30px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .AboutImage {
+        padding: 1px;
+    }
+}
+
+
+
+
+
+
+
+
+
+  
+      .image-section-3 {
+  background-image: url('/static/Team.jpg');
+  background-position: center;
+  background-size: cover;
+    padding: 70px;
+    background-repeat: no-repeat;
+    position: relative;
+  
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .container h3 {
+        font-size: 1em;
+    }
+
+    .container p {
+        font-size: 0.8em;
+    }
+
+    .box {
+        margin-bottom: 50px; 
+    }
+}
+
+.box {
+    background-color: rgb(131, 119, 119);
+    background-size: cover;
+    background-position: center; 
+    width: 350px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.box:hover, .box.initial-hover {
+    background-color: rgb(69, 65, 63); 
+    transform: translateY(-5px);
+    box-shadow: 0 5px 40px skyblue;
+}
+
+   
+
+
+
+
+
+
+  </style>
+  
+
+
+
+
+
+
+     <link rel="icon" type="image/x-icon" href="/static/logo1.png">
+</head>
+<body>
+
+
+    <div class="navbar" >  
+        <ul>
+            <li><a href="/predict">Predict Female</a></li>
+            <li><a href="/predictmale">Predict Male</a></li>
+            <li><a href="/RiskCal">Risk Calculator</a></li>
+            <li><a href="/ChatBot">ChatBot</a></li>
+            <li><a href="/contact">Feedback</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+            <li><a href="/">Log Out</a></li>
+        </ul>
+    </div>
+    
+    
+
+<div class="AboutImage">
+    <h1 style="text-align: center;">  About Us</h1>
+</div>
+
+
+
+<h2 style="text-align: center;">Our Team</h2>
+
+
+<div class="image-section-3">
+  <br><br><br><br> 
+
+  <div class="container">
+    <div class="box" onclick="handleBoxClick(this)">
+        <h3 style="text-align: center;">Abdullah Ishaq</h3>
+        <p>DataBase  & FrontEnd</p>
+        <p>1-Year Experience</p>
+        <p>Learned Web Development at COMSATS</p>
+    </div>
+
+    <div class="box initial-hover" onclick="handleBoxClick(this)">
+        <h3 style="text-align: center;">M.Ahsan Ismail</h3>
+        <p>Machine Learning & FrontEnd & Designing</p>
+        <p>1-Year Experience</p>
+        <p>Learned Web Development at COMSATS</p>
+    </div>
+
+    <div class="box" onclick="handleBoxClick(this)">
+        <h3 style="text-align: center;">Huzaifa Javaid</h3>
+        <p>Documentation</p>
+        <p>Learned Web Development at COMSATS</p>
+    </div>
+</div>
+
+<script>
+    function handleBoxClick(element) {
+       
+        document.querySelectorAll('.box').forEach(box => box.classList.remove('initial-hover'));
+
+    
+        element.classList.add('initial-hover');
+    }
+</script>
+
+
+
+
+</body>
+</html>
