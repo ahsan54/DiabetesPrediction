@@ -89,7 +89,47 @@ qa_pairs = {
     "How can I check my blood sugar at home?": "You can check your blood sugar at home using a blood glucose meter. You prick your finger and place a drop of blood on a test strip, then insert the strip into the meter for a reading.",
     "What should I do if I have a family history of diabetes?": "If you have a family history of diabetes, it's important to be proactive about managing your health. This includes eating a healthy diet, staying active, and getting regular check-ups with your doctor.",
     "Can stress affect diabetes?": "Yes, stress can affect blood sugar levels and make it harder to manage diabetes. Finding ways to manage stress, such as exercise, meditation, or talking to a friend, can help.",
-    "What are the early signs of diabetes?": "Early signs of diabetes can include feeling very thirsty, feeling very hungry even when you've eaten, blurry vision, and tingling or numbness in the hands or feet."
+    "What are the early signs of diabetes?": "Early signs of diabetes can include feeling very thirsty, feeling very hungry even when you've eaten, blurry vision, and tingling or numbness in the hands or feet.",
+      "Type 1 Diabetes?": "Type 1 diabetes is a chronic condition where the pancreas produces little or no insulin. It often develops in children or young adults, and people with Type 1 diabetes need to take insulin injections for the rest of their lives.",
+    "Type 2 Diabetes?": "Type 2 diabetes is a chronic condition where the body becomes resistant to insulin or doesn't produce enough insulin to maintain normal blood sugar levels. It is often associated with lifestyle factors such as obesity, physical inactivity, and unhealthy diet.",
+    "What causes Type 2 Diabetes?": "Type 2 diabetes is primarily caused by lifestyle factors such as being overweight or obese, lack of physical activity, and unhealthy eating habits. Genetics and family history also play a role in predisposing individuals to Type 2 diabetes.",
+    "How is Type 2 Diabetes managed?": "Type 2 diabetes is typically managed through lifestyle changes such as adopting a healthy diet, increasing physical activity, and losing weight if necessary. In some cases, medication or insulin therapy may also be prescribed to help control blood sugar levels.",
+    "What are the risk factors for Type 2 Diabetes?": "Risk factors for Type 2 diabetes include obesity, lack of physical activity, unhealthy diet, family history of diabetes, age (risk increases with age), and certain ethnicities (such as African American, Hispanic, Native American, and Asian American populations).",
+    "What are the complications of Type 2 Diabetes?": "Untreated or poorly managed Type 2 diabetes can lead to various complications including heart disease, stroke, kidney damage, nerve damage (neuropathy), eye problems (diabetic retinopathy), and foot problems (diabetic neuropathy). It's important to manage Type 2 diabetes effectively to reduce the risk of complications.",
+    "What are the symptoms of Type 2 Diabetes?": "Symptoms of Type 2 diabetes may include increased thirst, frequent urination, unexplained weight loss, fatigue, blurred vision, slow wound healing, and frequent infections. However, some people with Type 2 diabetes may not experience any symptoms initially.",
+    "Can Type 2 Diabetes be reversed?": "In some cases, Type 2 diabetes can be managed or even reversed through lifestyle changes such as weight loss, healthy eating, and regular physical activity. However, this depends on individual factors such as the duration of the condition and overall health status. It's important to consult with a healthcare professional for personalized advice and management.",
+    "What is the difference between Type 1 and Type 2 Diabetes?": "Type 1 diabetes is an autoimmune condition where the body's immune system attacks and destroys insulin-producing cells in the pancreas, leading to a lack of insulin production. Type 2 diabetes, on the other hand, is characterized by insulin resistance (where the body's cells don't respond properly to insulin) and/or insufficient insulin production. Type 1 diabetes typically develops in childhood or young adulthood, while Type 2 diabetes is more common in adults and is often associated with lifestyle factors such as obesity and physical inactivity.",
+    "How common is Type 2 Diabetes?": "Type 2 diabetes is the most common form of diabetes, accounting for approximately 90-95% of all diagnosed cases of diabetes. It affects millions of people worldwide and its prevalence is increasing, particularly due to rising obesity rates and sedentary lifestyles.",
+    "What are the treatment options for Type 2 Diabetes?": "Treatment for Type 2 diabetes may include lifestyle changes such as diet and exercise, oral medications to lower blood sugar levels, and/or insulin therapy. The goal of treatment is to manage blood sugar levels effectively and reduce the risk of complications.",
+    "Can Type 2 Diabetes lead to other health problems?": "Yes, if left untreated or poorly managed, Type 2 diabetes can lead to various health problems including heart disease, stroke, kidney damage, nerve damage, eye problems, and foot problems. It's important to manage Type 2 diabetes effectively to reduce the risk of complications.",
+     "What is Type 1 Diabetes?": "Type 1 diabetes is a chronic autoimmune condition in which the immune system mistakenly attacks and destroys insulin-producing beta cells in the pancreas. As a result, the body produces little to no insulin, a hormone necessary to regulate blood sugar levels.",
+    "What causes Type 1 Diabetes?": "The exact cause of Type 1 diabetes is not fully understood, but it is believed to involve a combination of genetic predisposition and environmental factors, such as viral infections or exposure to certain toxins, that trigger the autoimmune response.",
+    "Who is at risk for Type 1 Diabetes?": "Type 1 diabetes can develop at any age, but it is most commonly diagnosed in children, adolescents, and young adults. It is not directly linked to lifestyle factors such as diet or physical activity, and there is often a genetic predisposition involved.",
+    "How is Type 1 Diabetes managed?": "Type 1 diabetes is typically managed with insulin therapy, which involves injecting insulin to replace the hormone that the body is unable to produce. Individuals with Type 1 diabetes also need to monitor their blood sugar levels regularly and make adjustments to their insulin doses based on factors such as food intake, physical activity, and illness.",
+    "What are the symptoms of Type 1 Diabetes?": "Symptoms of Type 1 diabetes may include increased thirst, frequent urination, extreme hunger, unexplained weight loss, fatigue, irritability, blurred vision, and slow-healing wounds or sores. These symptoms can develop rapidly over a short period of time.",
+    "Can Type 1 Diabetes be prevented?": "Currently, there is no known way to prevent Type 1 diabetes. It is not caused by lifestyle factors such as diet or exercise, and there is no proven method for preventing the autoimmune response that leads to the destruction of insulin-producing cells in the pancreas.",
+    "What are the complications of Type 1 Diabetes?": "Untreated or poorly managed Type 1 diabetes can lead to various complications including heart disease, stroke, kidney damage, nerve damage (neuropathy), eye problems (diabetic retinopathy), and foot problems (diabetic neuropathy). It's important to manage Type 1 diabetes effectively to reduce the risk of complications.",
+    "What is the difference between Type 1 and Type 2 Diabetes?": "Type 1 diabetes is an autoimmune condition where the body's immune system attacks and destroys insulin-producing cells in the pancreas, leading to a lack of insulin production. Type 2 diabetes, on the other hand, is characterized by insulin resistance (where the body's cells don't respond properly to insulin) and/or insufficient insulin production. Type 1 diabetes typically develops in childhood or young adulthood, while Type 2 diabetes is more common in adults and is often associated with lifestyle factors such as obesity and physical inactivity.",
+    "How common is Type 1 Diabetes?": "Type 1 diabetes is less common than Type 2 diabetes, accounting for approximately 5-10% of all diagnosed cases of diabetes. It affects millions of people worldwide, and its prevalence varies by region.",
+    "how r U": "How can i help you?",
+     "hyyyyyyyyyyy hyyyyyy hyyyy hyyy hy ": "How can i help you?",
+       "What is sugar disease?": "Sugar disease, also known as diabetes, is a condition where your blood sugar levels become too high. It can cause serious health problems if not managed properly.",
+    "How do I know if I have sugar disease?": "You might have sugar disease if you feel very thirsty, pee a lot, feel very hungry even after eating, or have blurry vision. See a doctor for a check-up.",
+    "Can sugar disease go away on its own?": "No, sugar disease doesn't go away by itself. It needs treatment, like medicine, healthy habits, and regular check-ups with a doctor.",
+    "How can I prevent sugar disease?": "To prevent sugar disease, eat healthy foods like fruits, veggies, and whole grains. Avoid sugary drinks and snacks. Stay active by walking or doing other activities.",
+    "Is sugar disease dangerous?": "Yes, sugar disease can be dangerous if not managed well. It can cause heart disease, kidney damage, and eye problems. Follow your doctor's advice seriously.",
+    "What foods should I avoid if I have sugar disease?": "Avoid sugary and starchy foods like sweets, sugary drinks, white bread, and fried foods. Eat more fruits, veggies, and whole grains instead.",
+    "Can sugar disease affect my eyes?": "Yes, sugar disease can hurt your eyes if not managed. It can cause blurry vision, glaucoma, or even blindness. Get regular eye check-ups if you have sugar disease.",
+    "How do I check my blood sugar?": "Use a glucometer. Prick your finger, put a drop of blood on a strip, and insert it into the glucometer. It shows your blood sugar level.",
+       "Cure for Type 1 Diabetes?": "No cure yet.",
+    "Cure for Type 2 Diabetes?": "Not fully, but can be managed.",
+    "Can Type 1 Diabetes be reversed?": "No.",
+    "Can Type 2 Diabetes be reversed?": "Sometimes, with lifestyle changes.",
+    "Any treatments to cure diabetes?": "No cure, but treatments help manage.",
+    "Latest research on curing diabetes?": "Researchers are still studying."
+
+
+
 }
 
 
@@ -167,35 +207,33 @@ def nutri():
 
 @app.route('/result', methods=['POST'])
 def result():
-    Pragnancy = float(request.form['n2'])
-    GestationalDiabetes = float(request.form['n3'])
-    BMI = float(request.form['n4'])
-    FBS = float(request.form['n5'])
-    FamilyHistory = float(request.form['n7'])
-    Exercise = float(request.form['n8'])
-    IsDietHealthy = float(request.form['n9'])
+    BMI = float(request.form['n1'])
+    FBS = float(request.form['n2'])
+    Pragnancy = (request.form['n3'])
+    GestationalDiabetes = (request.form['n4'])
+    FamilyHistory = (request.form['n5'])
+    Exercise = (request.form['n6'])
+    HealthyDiet = (request.form['n7'])
 
     input_data = pd.DataFrame({
-        'Pragnancy': [Pragnancy],
-        'GestationalDiabetes': [GestationalDiabetes],
         'BMI': [BMI],
         'FBS': [FBS],
+        'Pragnancy': [Pragnancy],
+        'GestationalDiabetes': [GestationalDiabetes],
         'FamilyHistory': [FamilyHistory], 
         'Exercise': [Exercise],  
-        'IsDietHealthy': [IsDietHealthy]  
+        'HealthyDiet': [HealthyDiet]  
     })
 
-    # Load the trained model and scaler for female prediction
-    model_Female = joblib.load('D:/DPS/DPS updated/ModelFemalData.pkl')
-    scaler_Female = joblib.load('D:/DPS/DPS updated/ScalerFemalData.pkl')
 
-    # Preprocess the input data for female prediction
-    input_data_scaled = scaler_Female.transform(input_data)
+    pipeline = joblib.load('D:\DPS\DPS updated\ModelFemalData.pkl')
 
-    # Make predictions using the loaded model for females
-    predictions = model_Female.predict(input_data_scaled)
+    predictions = pipeline.predict(input_data)
+
 
     result_message = "You Will Get Diabetes In Future" if predictions[0] == 1 else "You Will Not Get Diabetes Soon"
+
+
 
     return render_template('result.html', result=result_message, result_message=result_message)
 
@@ -230,15 +268,12 @@ def resultmale():
     # Make predictions using the loaded pipeline for males
     predictions = pipeline.predict(input_data)
 
-    # Determine result message based on predictions
-    if predictions[0] == 1:
-        result_message = "You Will Get Diabetes In Future"
-    elif predictions[0] == 2:
-        result_message = "You Will Get Pre-Diabetes In Future"
-    else:
-        result_message = "You Will Not Get Diabetes Soon"
 
-    return render_template('result.html', result=result_message, result_message=result_message)
+    result_message = "You Will Get Diabetes In Future" if predictions[0] == 1 else "You Will Not Get Diabetes Soon"
+
+
+
+    return render_template('resultmale.html', result=result_message, result_message=result_message)
 
 
 if __name__ == '__main__':
