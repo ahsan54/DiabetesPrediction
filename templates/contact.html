@@ -58,20 +58,22 @@
 
 
 
-
 #chatbox {
             width: 350px;
-            height: 500px;
+            height: 405px;
             border-radius: 20px;
-            background-color: rgb(145, 180, 236);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
             margin: auto;
             display: flex;
             flex-direction: column;
             position: relative;
             overflow: hidden;
+            background-image: url('/static/AiChat.png'); 
+            background-size: contain;
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
         }
-
 
 
         #chatbox #chatlog {
@@ -81,15 +83,10 @@
             border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
         }
-
-        #chatbox #chatlog::-webkit-scrollbar {
-            width: 10px;
-            background-color: #f5f5f5;
-        }
-
-        #chatbox #chatlog::-webkit-scrollbar-thumb {
-            background-color: #ddd;
-        }
+        #chatbox #input-container {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
 
         #chatbox #chatlog, #chatbox #userinput {
             margin: 0;
@@ -98,30 +95,74 @@
         }
 
         #chatbox #userinput {
-            width: calc(100% - 60px);
-            padding: 10px 15px;
-            border-top: 1px solid #ddd;
+            width: calc(100% - 100px);
+            padding: 13px 15px;
+            border-top: 1px solid #000000;
+            display: inline-block;
         }
 
-        #chatbox #sendbutton {
-            width: 80px;
-            height: 50px;
-            border: none;
-            background-color: #3787ff;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            color: white;
-            padding: 10px;
-            float: right;
-        }
+     #chatbox #sendbutton {
+    width: 80px;
+    height: 53px;
+    border: none;
+    background-color: #3787ff;
+    border-radius: 0 4px 4px 0;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.1s ease; /* Add transition for transform property */
+}
+
+#chatbox #sendbutton:active {
+    transform: translateY(2px); /* Depress the button when active */
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(2px); /* Start at depressed state */
+    }
+    100% {
+        transform: translateY(0); /* Return to normal state */
+    }
+}
+
+#chatbox #sendbutton:active {
+    animation: rise 0.1s ease forwards; /* Apply rise animation when button is active */
+}
+
 
         #chatbox #sendbutton:hover {
-            background-color: #30609f;
+            background-color: #000000;
         }
 
+        #chatbox #chatlog p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#chatbox #chatlog p.user-message {
+    color: rgb(0, 0, 0); 
+    font-size: 19px; 
+}
+
+#chatbox #chatlog p.bot-response {
+    color: rgb(0, 0, 0); 
+    font-size: 19px; 
+  }
 
 
 
+
+
+
+
+
+
+
+
+
+        
 
 .navbar {
   padding: 10px;
@@ -313,9 +354,13 @@ Message:<br><br>
 
 <div id="displayDiv" class="hidden">
   <div id="chatbox">
+
     <div id="chatlog"></div>
+    <div id="input-container">
     <input id="userinput" type="text" placeholder="Type your message here..." />
     <button id="sendbutton">Send</button>
+  </div>
+    
   </div>
 </div>
 
@@ -336,9 +381,11 @@ Message:<br><br>
       .then(response => response.json())
       .then(data => {
        
-          let chatlog = document.getElementById('chatlog');
-          chatlog.innerHTML += '<p><strong>User:</strong> ' + userinput + '</p>';
-          chatlog.innerHTML += '<p><strong>Bot:</strong> ' + data.response + '</p>'; 
+        let chatlog = document.getElementById('chatlog');
+        chatlog.innerHTML += '<p class="user-message"><strong>User:</strong> ' + userinput + '</p>';
+
+        chatlog.innerHTML += '<p class="bot-response"><strong>Chat Support:</strong> ' + data.response + '</p><br>';
+
     
           document.getElementById('userinput').value = '';
 

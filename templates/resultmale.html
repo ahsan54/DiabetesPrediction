@@ -57,17 +57,19 @@
     <div class="image-section-2">
 
 
-        
         <div class="result-container">
             <h1>Diabetes Prediction Result</h1>
-            <p>{{ result_message }}</p>
-            
-            {% if result_message == "You Will Get Diabetes In Future" or result_message =="You Will Get Pre-Diabetes In Future" %}
+            <p>{{ result }}</p>
+        
+            {% if result_message == "You Will Get Diabetes In Future" %}
                 <p>For personalized advice, visit <a href="{{ url_for('nutri') }}" target="_blank">NutriFitJourney</a>.</p>
-            {% else %}
-                <p>For risk calculation, visit <a href="{{ url_for('Risk') }}" target="_blank">RiskCalculator</a>.</p>
+            {% endif %}
+        
+            {% if result_message == "You Will Not Get Diabetes Soon" %}
+                <p>For Risk calculation, visit <a href="{{ url_for('Risk') }}" target="_blank">RiskCalculator</a>.</p>
             {% endif %}
         </div>
+        
 
 
 
